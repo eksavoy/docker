@@ -37,7 +37,7 @@ ping_stats() {
 ## /var/lib/mysql on new volume is usually empty.
 
 echo
-if [ "$(ls -A $DATADIR)" ]; then
+if [ "$(ls $DATADIR)" ]; then
 	echo ">> Datadir is not empty.."
 	[ -f $PIDFILE ] && rm -f $PIDFILE
 else
